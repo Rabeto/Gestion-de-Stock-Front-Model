@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #009193;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.LoginController">
+   <children>
+      <VBox alignment="BOTTOM_RIGHT" layoutX="50.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="455.0" prefWidth="586.0" style="-fx-background-color: white; -fx-background-radius: 30;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="439.0" prefWidth="726.0" style="-fx-border-radius: 30;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="437.0" prefWidth="544.0" spacing="40.0" styleClass="teste">
+                           <children>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <FontAwesomeIcon fill="#9c1919ce" glyphName="CONNECTDEVELOP" size="10em" textAlignment="CENTER" wrappingWidth="169.7142858505249" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox alignment="CENTER" prefHeight="347.0" prefWidth="297.0" spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="75.0" prefWidth="142.0" style="-fx-text-fill: -text-color;" styleClass="h2" text="Login" textFill="#009194">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Freestyle Script" size="73.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox fx:id="box_username" alignment="CENTER_RIGHT" prefHeight="50.0">
+                                       <children>
+                                          <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" scaleX="1.3" scaleY="1.3" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                                          <TextField fx:id="username" prefHeight="36.0" prefWidth="230.0" promptText="Username" styleClass="clearable-field">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="box-light" />
+                                          <String fx:value="rounded" />
+                                       </styleClass>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="box_password" alignment="CENTER_RIGHT" prefHeight="50.0">
+                                       <children>
+                                          <SVGPath content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" scaleX="1.3" scaleY="1.3" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                                          <PasswordField fx:id="password" prefHeight="38.0" prefWidth="230.0" promptText="Password" styleClass="viewer-field">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </PasswordField>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="box-light" />
+                                          <String fx:value="rounded" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <JFXButton fx:id="btnSeConnecter" onAction="#connect" prefWidth="331.0" style="-fx-background-color: GREY;" text="SE CONNECTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label fx:id="lbl_error" styleClass="text-danger" text="Invalid username or password." visible="false" />
+                                    <HBox alignment="CENTER" prefHeight="17.0" prefWidth="289.0">
+                                       <children>
+                                          <Label text="Veullez entrer votre Identifiant / Mot de passe" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

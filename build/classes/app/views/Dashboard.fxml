@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DashboardController">
+   <children>
+      <AnchorPane prefHeight="80.0" style="-fx-background-color: #a1aec4;" AnchorPane.bottomAnchor="627.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="49.0" layoutY="17.0" prefHeight="47.0" prefWidth="264.0">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="3em" wrappingWidth="53.0" />
+                  <Label prefHeight="47.0" prefWidth="253.0" text="Tableau de bord">
+                     <font>
+                        <Font name="Agency FB Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="74.0" prefHeight="1.0" AnchorPane.bottomAnchor="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0" />
+      <AnchorPane layoutY="77.0" prefHeight="630.0" prefWidth="470.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
+         <children>
+            <VBox layoutX="742.0" layoutY="23.0" prefHeight="570.0" prefWidth="320.0" spacing="20.0" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="23.0">
+               <children>
+                  <AnchorPane prefHeight="129.0" prefWidth="227.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="13.0" prefHeight="100.0" prefWidth="109.0" style="-fx-background-color: #DB5929;">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CUBES" size="5em" wrappingWidth="79.14286041259766" />
+                           </graphic>
+                        </Label>
+                        <Label layoutX="183.0" layoutY="13.0" prefHeight="48.0" prefWidth="123.0" text="Produits">
+                           <font>
+                              <Font name="Agency FB" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="qteProduit" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="182.0" layoutY="77.0" prefHeight="27.0" prefWidth="109.0" text="325">
+                           <font>
+                              <Font name="Agency FB" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="129.0" prefWidth="216.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="13.0" prefHeight="100.0" prefWidth="109.0" style="-fx-background-color: #4EA44E;">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" size="5em" wrappingWidth="79.14286041259766" />
+                           </graphic>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="133.0" layoutY="13.0" prefHeight="48.0" prefWidth="156.0" text="Entrées">
+                           <font>
+                              <Font name="Agency FB" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="qteEntree" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="174.0" layoutY="72.0" prefHeight="27.0" prefWidth="109.0" text="210">
+                           <font>
+                              <Font name="Agency FB" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="129.0" prefWidth="216.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="13.0" prefHeight="100.0" prefWidth="109.0" style="-fx-background-color: #E2961A;">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" size="5em" wrappingWidth="79.14286041259766" />
+                           </graphic>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="142.0" layoutY="13.0" prefHeight="48.0" prefWidth="146.0" text="Sorties">
+                           <font>
+                              <Font name="Agency FB" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="qteSortie" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="183.0" layoutY="76.0" prefHeight="29.0" prefWidth="109.0" text="115">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="reload" mnemonicParsing="false" onAction="#chargerGraph" text="reload" visible="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <PieChart fx:id="pieChart" layoutX="31.0" layoutY="23.0" onMouseClicked="#chargerGraph" prefHeight="523.0" prefWidth="633.0" style="-fx-border-color: grey; -fx-background-color: white;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="367.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+.table-view {
+	-fx-border-collapse : collapse;
+}
+
+.icol {
+	-fx-text-fill:black;
+	-fx-font-size:15px;
+
+}
+
+
+.column-header .label{
+	-fx-table-view-border-collapse : collapse;
+	-fx-text-fill:  white;
+	-fx-font-size: 15px;
+	-fx-table-cell-border-color: #009688;
+	-fx-marging : 0px;
+	-fx-padding: 8px 8px;
+	-fx-font-weight: bolder;
+}
+
+.column-header {
+	-fx-background-color: #1ABB9C;
+	-fx-border-color:  #009688;
+}
+
+.table-view:focused .table-row-cell:selected {
+	-fx-text-fill: red;
+	-fx-background-color:grey;
+	-fx-table-color:red;
+}
+.table-view:focused .table-cell:selected .table-cell{
+	-fx-text-fill:red;
+	-fx-background-color:grey;
+}
+
+.table-cell{
+	-fx-padding: 20px;
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+}
+
+.nav-button:hover{
+	-fx-background-color: #222D32;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
